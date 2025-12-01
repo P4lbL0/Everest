@@ -1,7 +1,7 @@
 const studentSelect = document.getElementById("studentSelect");
 const tableBody = document.querySelector("#studentsTable tbody");
 const mountainContainer = document.querySelector(".mountain-container");
-
+loadData();
 function populateStudents() {
   students.forEach(s => {
     const option = document.createElement("option");

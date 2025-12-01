@@ -32,4 +32,19 @@ function addPerformance(studentName, level, mode, objectiveMet, bonus = 0, malus
 
   student.meters += metersGained;
   student.performances.push({ level, mode, objectiveMet, bonus, malus, metersGained, lessonObjective });
+  saveData();
+}
+function saveData() {
+    localStorage.setItem("everestData", JSON.stringify(students));
+}
+
+function loadData() {
+    const data = localStorage.getItem("everestData");
+    if (data) {
+        const saved = JSON.parse(data);
+        saved.forEach((s, i) => {
+            students[i].meters = s.meters;
+            students[i].performances = s.performances;
+        });
+    }
 }
