@@ -83,3 +83,10 @@ li {
   color: #fff;
   font-size: 18px;
 }
+.reset-btn {
+    background: #e74c3c;
+}
+
+.reset-btn:hover {
+    background: #c0392b;
+}
